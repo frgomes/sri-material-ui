@@ -1,14 +1,13 @@
 name := "material-ui"
 
-//version := "2018.3.0-SNAPSHOT"
-
 enablePlugins(ScalaJSPlugin)
 
-val scala212 = "2.12.4"
+val scala212 = "2.12.8"
+val scala213 = "2.13.0"
 
 scalaVersion := scala212
 
-crossScalaVersions := Seq(scala212)
+crossScalaVersions := Seq(scala212, scala213)
 
 sources in doc in Compile := List()
 
@@ -21,9 +20,9 @@ scalacOptions ++= Seq(
 
 //Dependencies
 libraryDependencies ++= Seq(
-  "scalajs-react-interface" %%% "core" % "2018.2.2-RC" % Provided,
-  "scalajs-react-interface" %%% "universal" % "2018.2.9-RC" % Provided,
-  "scalajs-react-interface" %%% "vdom" % "2018.2.2-RC" % Provided
+  "scalajs-react-interface" %%% "core" % "2019.06.26" % Provided,
+  "scalajs-react-interface" %%% "universal" % "2019.06.26" % Provided,
+  "scalajs-react-interface" %%% "vdom" % "2019.06.26" % Provided
 )
 
 //bintray
@@ -77,8 +76,8 @@ resolvers += Resolver.bintrayRepo("scalajs-jest", "maven")
 resolvers += Resolver.bintrayRepo("scalajs-plus", "maven")
 
 libraryDependencies ++= Seq(
-  "org.scala-js" %%% "scalajs-dom" % "0.9.5" % Test,
-  "scalajs-jest" %%% "core" % "2018.2.2-RC" % Test
+  "org.scala-js" %%% "scalajs-dom" % "0.9.7" % Test,
+  "scalajs-jest" %%% "core" % "2019.06.26" % Test
 )
 //scalaJSStage in Global := FastOptStage
 scalaJSStage in Global := FullOptStage
